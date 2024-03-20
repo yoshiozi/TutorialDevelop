@@ -80,8 +80,8 @@ class UserControllerTest {
 
          //userlistの検証
         List<User> userlist = (List<User>)result.getModelAndView().getModel().get("userlist");
-//        for (int i=0; i<userlist.size(); ++i) {
-//        User user = userlist.get(i);
+        int listCount = userlist.size();
+        System.out.println(listCount);
         User user = userlist.get(0);
         assertEquals(1, user.getId());
         assertEquals("キラメキ太郎", user.getName());
@@ -91,7 +91,6 @@ class UserControllerTest {
         User user11 = userlist.get(2);
         assertEquals(3, user11.getId());
         assertEquals("キラメキ花子", user11.getName());
-//        }
     }
 }
 
